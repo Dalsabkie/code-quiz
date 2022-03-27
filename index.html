@@ -1,47 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Code Quiz</title>
-</head>
-
-<body>
-    <nav>
-        <a href="highscores.html" class="highscore">View High Scores</a>
-        <h1 class="title">JavaScript Code Quiz</h1>
-        <h2> <strong class="time">Time:</strong> <span id="timer">0</span></h2>
-    </nav>
-    <div class="main-contents">
-        <main class="instructions">
-            <h2>Quiz Instructions:</h2>
-            <p>Try to answer the following questions within the time limit. Incorrect answers will deduct 5 seconds from the time. The remaining time will be added to your final score. Good luck!</p>
-            <button id="start-btn" class="btn">Start Quiz</button>
-        </main>
-
-        <div class="quiz-questions">
-            <h3 class="question"></h3>
-            <ul>
-                <li><button id="answer1" class="btn"></button></li>
-                <li><button id="answer2" class="btn"></button></li>
-                <li><button id="answer3" class="btn"></button></li>
-                <li><button id="answer4" class="btn"></button></li>
-            </ul>
-            <h4 id="choice"></h4>
+    <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div id="nav">
+			<!-- view scores link on the top left of nav bar-->
+			<div class="left">
+                <a onclick="getScore()" href="#"><h4 >View Highscore</h4></a>
+			</div>
+			<!-- countdown timer on the top right of nav bar-->
+			<div class="right">
+				<h4>Time: <span id="timeLeft">0</span></h4>
+			</div>
+		</div>
+		<!--main body of quiz-->
+		<div id="quiz">
+            <div id="quizBody">      
+                <h1>   
+                    Coding Quiz Challenge!
+                </h1>
+                <h3>
+					Try to answer the following code-related questions within the time limit.
+                    Keep in mind that incorrect answers will penalize your score/time
+                    by ten seconds! 
+                </h3>
+                <button onclick="start()">Start Quiz!</button>
+            </div>
         </div>
-
-        <form class="final-score">
-            <h4 class="userScore"></h4>
-            <label class="initials">Enter Initials: </label>
-            <input type="text" id="user" />
-            <button id="save-score" class="btn">Save</button>
-        </form>
-    </div>
-
-    <script src="./assets/js/script.js"></script>
-</body>
-
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>
